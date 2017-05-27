@@ -19,8 +19,8 @@ body {
 /* heading navigation ------------------------------------------------------- */
 .header {
   position: fixed;
-  top: 0;
-  left: 0; right: 0;
+  z-index: 1;
+  top: 0; left: 0; right: 0;
   height: 2rem;
   margin: 0 auto;
   background-color: rgba(25, 25, 25, 0.7);
@@ -41,14 +41,15 @@ body {
   line-height: 2rem;
   padding: auto 0;
   text-align: center;
-  /* transition */
+  /* effects */
+  cursor: pointer;
   transition: 0.2s ease-out;
 }
 
 .header .header-item:hover {
-  cursor: pointer;
   transform: scale(1.1);
   background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
 }
 /* -------------------------------------------------------------------------- */
 
@@ -59,18 +60,55 @@ main.landing {
   margin: 0 auto;
 }
 
-main.landing #first {
+main.landing .landing-image {
+  position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url("https://i.ytimg.com/vi/k7pQYs6ysXs/maxresdefault.jpg");
   background-size: cover;
 }
 
+main.landing #first {
+  background-image: url("../assets/images/alley.jpg");
+}
+
 main.landing #second {
-  width: 100%;
-  height: 100vh;
-  background-image: url("http://allswalls.com/images/city-background-wallpaper-1.jpg");
-  background-size: cover;
+  background-image: url("../assets/images/city.jpg");
+  border-top: 2px solid rgba(25, 25, 25, 0.7);
+  border-bottom: 2px solid rgba(25, 25, 25, 0.7);
+}
+
+main.landing #third {
+  background-image: url("../assets/images/barbell.jpg");
+}
+
+.landing-image .dialogue-box {
+  /* font */
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-size: 1.4rem;
+  /* dimensions */
+  position: absolute;
+  width: auto;
+  height: auto;
+  line-height: 3rem;
+  border-radius: 5px;
+  padding: 3px 12px;
+  background-color: rgba(10, 10, 10, 0.9);
+  bottom: 25%;
+  /* effects */
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+
+.landing-image#first .dialogue-box { left: 10%; }
+.landing-image#second .dialogue-box { right: 10%; }
+.landing-image#third .dialogue-box { left: 10%; bottom: 15%; }
+
+.landing-image .dialogue-box:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  text-shadow: 2px 1px black;
+  /*border: 1px solid rgba(145, 145, 145, 0.7);*/
+  transform: scale(1.1);
 }
 
 /* -------------------------------------------------------------------------- */
