@@ -19,10 +19,9 @@ body {
   z-index: 1;
   top: 0; left: 0; right: 0;
   height: 2rem;
-  margin: 0 auto;
 }
 
-.header .header-item {
+.header-item {
   /* font */
   font-family: 'Khula', sans-serif;
   font-weight: bold;
@@ -40,51 +39,49 @@ body {
   background-color: rgba(25, 25, 25, 0.7);
   /* effects */
   cursor: pointer;
-  transition: 0.2s ease-out;
+  -webkit-transition: 0.2s ease-out;
+          transition: 0.2s ease-out;
 }
 
-.header .header-item:hover {
-  transform: scale(1.1);
+.header-item:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
 }
 
-.header .header-item .ionicon {
+.header-item .ionicon {
   margin-right: 10px;
 }
 
 /* main LANDING ------------------------------------------------------------- */
-.landing {
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
 
-.landing .landing-section {
+.landing-section {
   position: relative;
   width: 100%;
   height: 100vh;
   background-size: cover;
 }
 
-.landing .landing-section#first {
+.landing-section#first {
   background-image: url('../assets/images/alley.jpg');
   background-position: 30% 0;
 }
 
-.landing .landing-section#second {
+.landing-section#second {
   background-image: url('../assets/images/city.jpg');
   border-top: 4px solid rgba(25, 25, 25, 0.7);
   border-bottom: 4px solid rgba(25, 25, 25, 0.7);
   background-position: 80% 20%;
 }
 
-.landing .landing-section#third {
+.landing-section#third {
   background-image: url('../assets/images/barbell.jpg');
   background-position: 52% 0%;
 }
 
-.landing-section .dialogue-box {
+.dialogue-box {
   /* font */
   font-family: 'Raleway', sans-serif;
   color: white;
@@ -104,7 +101,7 @@ body {
           transition: 0.2s ease-out;
 }
 
-.landing-section .dialogue-box .ionicon {
+.dialogue-box .ionicon {
   margin-right: 10px;
 }
 
@@ -112,7 +109,7 @@ body {
 .landing-section#second .dialogue-box { right: 10%; }
 .landing-section#third .dialogue-box { left: 10%; bottom: 15%; }
 
-.landing-section .dialogue-box:hover {
+.dialogue-box:hover {
   background-color: rgba(255, 255, 255, 0.6);
   text-shadow: 2px 1px black;
   -webkit-transform: scale(1.1);
@@ -131,26 +128,6 @@ body {
 
 .landing-section#third .dialogue-box:hover {
   background-color: rgba(194, 39, 39, 0.6);
-}
-
-/* GRID implementation ------------------------------------------------------ */
-.column {
-  float: left;
-  padding: 0 1rem;
-  margin: 0;
-  box-sizing: border-box;
-}
-.column.full    { width: 100%; }
-.column.half     { width: 50%; }
-.column.third   { width: 33.3%; }
-.column.fourth  { width: 25%; }
-
-/* housekeeping ------------------------------------------------------------- */
-.no-select {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 
