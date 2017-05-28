@@ -117,6 +117,19 @@ body {
           transform: scale(1.1);
 }
 
+
+.landing-section#first .dialogue-box:hover {
+   background-color: rgba(38, 45, 165, 0.6);
+}
+
+.landing-section#second .dialogue-box:hover {
+  background-color: rgba(214, 164, 70, 0.6);
+}
+
+.landing-section#third .dialogue-box:hover {
+  background-color: rgba(194, 39, 39, 0.6);
+}
+
 /* -------------------------------------------------------------------------- */
 
 /* GRID implementation ------------------------------------------------------ */
