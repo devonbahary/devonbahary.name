@@ -55,7 +55,6 @@ body {
   margin-right: 10px;
 }
 
-
 .vocab-app {
   position: relative;
   background: url('../assets/images/waterfall.jpg');
@@ -63,4 +62,68 @@ body {
   width: 100%;
   height: 100vh;
   background-position: 70% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gray-box {
+  /* dimensions */
+  position: absolute;
+  width: 20%;
+  height: 3rem;
+  padding: 3px 12px;
+  border-radius: 5px;
+  background-color: rgba(25, 25, 25, 0.7);
+  box-sizing: border-box;
+}
+
+.gray-box.intro {
+  display: none;
+  /* font */
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-size: 1.4rem;
+  /* center text vertically and horizontally */
+  text-align: center;
+  line-height: 3rem;
+}
+
+.gray-box.interactable {
+  /* effects */
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-out;
+          transition: 0.2s ease-out;
+}
+
+#word-box {
+  height: auto;
+}
+
+#word-name {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-size: 1.4rem;
+  line-height: 3rem;
+}
+
+#word-def {
+  margin-top: 3rem;
+  font-family: 'Open Sans', sans-serif;
+  width: 70%;
+  color: white;
+  font-size: 1rem;
+  line-height: 3rem;
+  height: auto;
+}
+
+.intro:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.interactable:hover {
+  background-color: rgba(40, 117, 76, 0.6);
+  text-shadow: 2px 1px black;
 }
