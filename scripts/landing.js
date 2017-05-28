@@ -16,13 +16,13 @@ $(document).ready(function() {
 
   // implement on-click scrolling to next landing image, looping back to the
   // top after the last
-  $('.landing-image#first .dialogue-box').click(function() {
-    $('.landing-image#second').scrollView();
+  $('.landing-section#first .dialogue-box').click(function() {
+    $('.landing-section#second').scrollView();
   });
-  $('.landing-image#second .dialogue-box').click(function() {
-    $('.landing-image#third').scrollView();
+  $('.landing-section#second .dialogue-box').click(function() {
+    $('.landing-section#third').scrollView();
   });
-  $('.landing-image#third .dialogue-box').click(function() {
-    $('.landing-image#first').scrollView();
+  $('.landing-section#third .dialogue-box').click(function() {
+    $('.landing-section#first').scrollView();
   });
 });
